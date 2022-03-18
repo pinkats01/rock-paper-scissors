@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let things= ["Rock", "Paper", "Scissors"];
+
+        let playerScore= 0;
+        let computerScore= 0;
+
+        function computerPlay(){
+         let computerSelection= things[Math.floor(Math.random()*things.length)];
+         return(computerSelection);
+        }
+
+        function playRound(){
+           let playerSelection= prompt("Choose your player from:\n Rock, Paper, Scissors", "").toLowerCase();
+           let computerSelection=computerPlay().toLowerCase();
+
+           if(playerSelection==computerSelection){
+                return("Both players chose the same thing.")
+            }
+            else if(playerSelection=="rock" && computerSelection=="scissors" || playerSelection=="paper" && computerSelection=="rock"
+                    || playerSelection=="scissors" && computerSelection=="paper"){
+                playerScore++;
+                return(`You won!! the computer chose: ${computerSelection}. Your score: ${playerScore}, The computer score:${computerScore}`);
+            }
+            else {
+                computerScore++;
+                return(`The computer won, he chose: ${computerSelection}. Your score:${playerScore}, The computer score:${computerScore}`);  
+            } 
+        }
+        
+        function game(){
+            for(let i=0; i<5; i++){
+               console.log(playRound());
+            }
+        }
+        console.log(game());
+    </script>
+</body>
+</html>
