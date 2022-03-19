@@ -28,11 +28,11 @@
             else if(playerSelection=="rock" && computerSelection=="scissors" || playerSelection=="paper" && computerSelection=="rock"
                     || playerSelection=="scissors" && computerSelection=="paper"){
                 playerScore++;
-                return(`You won!! the computer chose: ${computerSelection}. Your score: ${playerScore}, The computer score:${computerScore}`);
+                return(`You won!!\n The player: ${playerSelection} \n the computer chose: ${computerSelection}.\n Your score: ${playerScore}, The computer score:${computerScore}`);
             }
             else {
                 computerScore++;
-                return(`The computer won, he chose: ${computerSelection}. Your score:${playerScore}, The computer score:${computerScore}`);  
+                return(`The computer won,\n The player: ${playerSelection} \n the computer chose: ${computerSelection}.\n Your score:${playerScore}, The computer score:${computerScore}`);  
             } 
         }
         
