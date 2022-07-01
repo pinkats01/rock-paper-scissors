@@ -1,4 +1,5 @@
-body {
+/*index file style*/
+#index-body {
     background-image: url(images/index_background.png);
     background-size: cover;
     background-repeat: no-repeat;
@@ -36,4 +37,159 @@ button {
     background-color: #FFC266;
     color: white;
     box-shadow: -15px 10px #534887;
+}
+
+#error {
+    color: #4CFF32;
+}
+
+/*during_game file style*/
+#during_game-body {
+    background-image: url(images/during_game.png);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-size: 1.5em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+#player-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 20px;
+}
+
+#player-selection img {
+    height: 150px;
+    width: 150px;
+}
+
+#player-selection {
+    display: flex;
+    gap: 20px;
+}
+
+.name {
+    font-size: larger;
+    background-color: #FFC266;
+    border: #d68203 3px solid;
+    padding: 10px 20px;
+    border-radius: 20px;
+    box-shadow: -15px 10px #534887;
+}
+
+.score {
+    border-bottom: 2px white dashed;
+}
+
+#computer-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 30px;
+}
+
+#computer-logo img{
+    height: 370px;
+    width: 370px;
+}
+
+.logos {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.tags{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 200px;
+    padding: 30px;
+}
+
+/*computer won file style*/
+#computer_won-body{
+    min-height: 100%;
+    background-image: url(images/computer_won.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-size: 1.5em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+
+.computer_won-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.para {
+    font-size: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    color: #FF4A32;
+}
+
+.computer_won-container button {
+    background-color: #4CFF32;
+}
+
+/*player won file style*/
+#player_won-body {
+    background-image: url(images/player_won.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+    font-size: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    overflow: hidden;;
+}
+
+.player_won-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: space-around;
+    gap: 350px;
+    margin: 5px 0;
+}
+
+.player_won-container .para {
+    color: white;
+    background-color: rgba(129, 165, 40, .6);
+    padding: 10px;
+    border-radius: 25px;
+}
+
+.player_won-container button {
+    box-shadow: -15px 10px #85A82F;
+
 }
