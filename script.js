@@ -1,16 +1,12 @@
-/*let things= ["Rock", "Paper", "Scissors"];
+let things= ["Rock", "Paper", "Scissor"];
 
         let playerScore= 0;
         let computerScore= 0;
 
-        function computerPlay(){
-         let computerSelection= things[Math.floor(Math.random()*things.length)];
-         return(computerSelection);
-        }
 
         function playRound(){
-           let playerSelection= prompt("Choose your player from:\n Rock, Paper, Scissors", "").toLowerCase();
-           let computerSelection=computerPlay().toLowerCase();
+           /*let playerSelection= prompt("Choose your player from:\n Rock, Paper, Scissors", "").toLowerCase();*/
+           
 
            if(playerSelection==computerSelection){
                 return("Both players chose the same thing.")
@@ -31,4 +27,30 @@
                console.log(playRound());
             }
         }
-        console.log(game());*/
+        
+        let rock= document.querySelector('.rock');
+        let paper= document.querySelector('.paper');
+        let scissor= document.querySelector('.scissor');
+
+        let selection= [rock, paper, scissor];
+        selection.forEach(select => select.addEventListener('click', computerPlay));
+
+       /* computerSelectorLoading(){
+          let computerSelector= [rock, paper, scissor];
+
+        }*/
+
+        function computerPlay(){
+         let computerSelection= things[Math.floor(Math.random()*things.length)].toLowerCase();
+         let img= document.createElement("img");
+         img.src= `../images/${computerSelection}.png`
+         img.height= 150;
+         img.width= 150;
+         img.style.cssText= 'top: 30px, left:30px, position: relative';
+         document.getElementById('computer-selection').appendChild(img);
+
+         /*let computerBox= document.getElementById('computer-selection');
+         computerBox.classList.add('computer-choice');*/
+         let computerLogo= document.getElementById('computer-logo');
+         computerLogo.remove();
+        }
