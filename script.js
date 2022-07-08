@@ -1,56 +1,90 @@
-let things= ["Rock", "Paper", "Scissor"];
+    let things= ["Rock", "Paper", "Scissors"];
+       
+    let rock= document.querySelector('.rock');
+    let paper= document.querySelector('.paper');
+    let scissors= document.querySelector('.scissors');
 
-        let playerScore= 0;
-        let computerScore= 0;
+    let selection= [rock, paper, scissors];
+
+    selection.forEach(select => select.addEventListener('click', e=> playRound(e)));
+
+       /* function computerPlay(){
+            let img= document.createElement("img");
+            img.src= `../images/${computerSelection}.png`
+            img.height= 150;
+            img.width= 150;
+            img.style.cssText= 'top: 30px, left:30px, position: relative';
+            document.getElementById('computer-selection').appendChild(img);
+   
+            /*let computerBox= document.getElementById('computer-selection');
+            computerBox.classList.add('computer-choice');
+            let computerLogo= document.getElementById('computer-logo');
+            computerLogo.remove();
+           };*/
 
 
-        function playRound(){
-           /*let playerSelection= prompt("Choose your player from:\n Rock, Paper, Scissors", "").toLowerCase();*/
-           
+        // increment score
+        let playerScore= document.getElementById('player-score');
+        let computerScore= document.getElementById('computer-score');
 
-           if(playerSelection==computerSelection){
-                return("Both players chose the same thing.")
-            }
-            else if(playerSelection=="rock" && computerSelection=="scissors" || playerSelection=="paper" && computerSelection=="rock"
-                    || playerSelection=="scissors" && computerSelection=="paper"){
-                playerScore++;
-                return(`You won!!\n The player: ${playerSelection} \n the computer chose: ${computerSelection}.\n Your score: ${playerScore}, The computer score:${computerScore}`);
-            }
-            else {
-                computerScore++;
-                return(`The computer won,\n The player: ${playerSelection} \n the computer chose: ${computerSelection}.\n Your score:${playerScore}, The computer score:${computerScore}`);  
-            } 
+        let playerScoreJs= 0;
+        let computerScoreJs= 0;
+
+        playerScore.innerHTML= playerScoreJs;
+        computerScore.innerHTML= computerScoreJs;
+
+
+        function playRound(e){
+        let playerSelection= e.target.alt.toString();
+        let computerSelection= things[Math.floor(Math.random()*things.length)].toLowerCase();
+
+ 
+
+        if(playerSelection==computerSelection){
+            alert('BOTH THE PLAYER AND THE COMPUTER CHOSE THE SAME THING');
+            return;
         }
-        
-        function game(){
-            for(let i=0; i<5; i++){
-               console.log(playRound());
-            }
+        else if(playerSelection=="rock" && computerSelection=="scissors" || playerSelection=="paper" && computerSelection=="rock"
+                || playerSelection=="scissors" && computerSelection=="paper"){
+            playerScoreJs++; 
+            playerScore.innerHTML= playerScoreJs;
         }
-        
-        let rock= document.querySelector('.rock');
-        let paper= document.querySelector('.paper');
-        let scissor= document.querySelector('.scissor');
-
-        let selection= [rock, paper, scissor];
-        selection.forEach(select => select.addEventListener('click', computerPlay));
-
-       /* computerSelectorLoading(){
-          let computerSelector= [rock, paper, scissor];
-
-        }*/
-
-        function computerPlay(){
-         let computerSelection= things[Math.floor(Math.random()*things.length)].toLowerCase();
-         let img= document.createElement("img");
-         img.src= `../images/${computerSelection}.png`
-         img.height= 150;
-         img.width= 150;
-         img.style.cssText= 'top: 30px, left:30px, position: relative';
-         document.getElementById('computer-selection').appendChild(img);
-
-         /*let computerBox= document.getElementById('computer-selection');
-         computerBox.classList.add('computer-choice');*/
-         let computerLogo= document.getElementById('computer-logo');
-         computerLogo.remove();
+        else {
+            computerScoreJs++;
+            computerScore.innerHTML= computerScoreJs;
+        } 
+        if(playerScoreJs==5){
+          window.location="file:///C:/Users/khadi/OneDrive/Documents/Repos/rock-paper-scissors/html/player_won.html";
         }
+        if(computerScoreJs==5){
+            window.location="file:///C:/Users/khadi/OneDrive/Documents/Repos/rock-paper-scissors/html/computer_won.html";
+          }
+
+          let img= document.createElement("img");
+          img.src= `../images/${computerSelection}.png`
+          img.height= 150;
+          img.width= 150;
+          img.style.cssText= 'top: 30px, left:30px, display:flex, flex-flow: row wrap';
+          document.getElementById('computer-selection').appendChild(img);
+          let computerLogo= document.getElementById('computer-logo');
+          computerLogo?.remove(); 
+    }
+
+    let audio= new Audio('../sounds/computer_sound.mp3');
+
+    function audioPlay(){
+       audio.play();
+       audio.currentTime= 0;
+    };
+    selection.forEach(select => select.addEventListener('click', audioPlay));
+
+    //background music
+     let backgroundMusic= document.getElementById('myAudio');
+
+    function musicStart(){
+        backgroundMusic.play();
+    }
+    selection.forEach(select => select.addEventListener('click', musicStart));
+
+
+
