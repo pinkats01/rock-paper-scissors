@@ -8,21 +8,6 @@
 
     selection.forEach(select => select.addEventListener('click', e=> playRound(e)));
 
-       /* function computerPlay(){
-            let img= document.createElement("img");
-            img.src= `../images/${computerSelection}.png`
-            img.height= 150;
-            img.width= 150;
-            img.style.cssText= 'top: 30px, left:30px, position: relative';
-            document.getElementById('computer-selection').appendChild(img);
-   
-            /*let computerBox= document.getElementById('computer-selection');
-            computerBox.classList.add('computer-choice');
-            let computerLogo= document.getElementById('computer-logo');
-            computerLogo.remove();
-           };*/
-
-
         // increment score
         let playerScore= document.getElementById('player-score');
         let computerScore= document.getElementById('computer-score');
@@ -54,10 +39,10 @@
             computerScore.innerHTML= computerScoreJs;
         } 
         if(playerScoreJs==5){
-          window.location="file:///C:/Users/khadi/OneDrive/Documents/Repos/rock-paper-scissors/html/player_won.html";
+          window.location="html/player_won.html";
         }
         if(computerScoreJs==5){
-            window.location="file:///C:/Users/khadi/OneDrive/Documents/Repos/rock-paper-scissors/html/computer_won.html";
+            window.location="html/computer_won.html";
           }
 
           let img= document.createElement("img");
