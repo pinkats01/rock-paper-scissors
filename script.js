@@ -39,10 +39,10 @@
             computerScore.innerHTML= computerScoreJs;
         } 
         if(playerScoreJs==5){
-          window.location="./html/player_won.html";
+          window.location="rock-paper-scissor/html/player_won.html";
         }
         if(computerScoreJs==5){
-            window.location="./html/computer_won.html";
+            window.location="rock-paper-scissor/html/computer_won.html";
           }
 
           let img= document.createElement("img");
