@@ -4,13 +4,13 @@
 https://pinkats01.github.io/rock-paper-scissors/
 
 # Description:
-I made a Rock Paper Scissors game that you can play vs the computer. This my first project working with javascript,</br>
+I made a Rock Paper Scissors game that you can play vs the computer. This is my first project working with javascript,</br>
 I faced a lot of problems while making this game like directing to a new html file using Js, not being able</br>
 to reach a local file in firefox mozilla because of security precautions etc, but after facing a lot of problems I feel like I'm</br> 
 more comfortable in facing and expecting them.</br>
-I tried to make this game visually appealing, so I made all the visuals and graphics by myself,</br>
-and I tried to make a simple storyline to give it more meaning and purpose.</br>
-If you lose or win, in both instances there is a visual, I spent a lot of time making them so I wanted to people to notice them.</br>
+I tried to make this game visually appealing, so I spent a lot of time making the visuals and graphics by myself,</br>
+If you lose or win, in both instances there is a special visual, I wanted to people to pay attention them.</br>
+and I tried to add a simple storyline to give it more meaning and purpose.</br>
 
 # Story:
 "the computer rebelled and you have to fight it playing Rock Ppaer Scissors, you have to win 5 times, if you win you will gain control again,</br>
