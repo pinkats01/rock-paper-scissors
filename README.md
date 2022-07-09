@@ -14,7 +14,7 @@ If you lose or win, in both instances there is a visual, I spent a lot of time m
 and I tried to add a simple storyline to give it more meaning and purpose.</br>
 
 # Story:
-"the computer rebelled and you have to fight it playing Rock Ppaer Scissors, you have to win 5 times, if you win you will gain control again,</br>
+"the computer rebelled and you have to fight it playing Rock Paper Scissors, you have to win 5 times, if you win you will gain control again,</br>
 if you lose the computer took over everything."  
 
 
