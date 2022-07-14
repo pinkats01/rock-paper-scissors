@@ -62,6 +62,7 @@
     function musicStart(){
         backgroundMusic.play();
     }
+    // I couldn't start background music on page on load event because of security precautions.
     selection.forEach(select => select.addEventListener('click', musicStart));
 
 
