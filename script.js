@@ -18,12 +18,10 @@
         playerScore.innerHTML= playerScoreJs;
         computerScore.innerHTML= computerScoreJs;
 
-
+        //game logic
         function playRound(e){
         let playerSelection= e.target.alt.toString();
         let computerSelection= things[Math.floor(Math.random()*things.length)].toLowerCase();
-
- 
 
         if(playerSelection==computerSelection){
             alert('BOTH THE PLAYER AND THE COMPUTER CHOSE THE SAME THING');
@@ -44,15 +42,10 @@
         if(computerScoreJs==5){
             window.location.assign("computer_won.html");
           }
-
-          let img= document.createElement("img");
-          img.src= `../images/${computerSelection}.png`
-          img.height= 150;
-          img.width= 150;
-          img.style.cssText= 'top: 30px, left:30px, display:flex, flex-flow: row wrap';
-          document.getElementById('computer-selection').appendChild(img);
+           
+          
           let computerLogo= document.getElementById('computer-logo');
-          computerLogo?.remove(); 
+          computerLogo.src= `../images/${computerSelection}.png`
     }
 
     let audio= new Audio('../sounds/computer_sound.mp3');

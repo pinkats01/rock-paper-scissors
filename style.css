@@ -131,7 +131,7 @@ button {
 
 /*computer won file style*/
 #computer_won-body{
-    min-height: 100%;
+    min-height: 100vh;
     background-image: url(images/computer_won.png);
     background-size: cover;
     background-position: center;
@@ -206,7 +206,6 @@ button {
 button:hover {
     transform: scale(1.2);
     box-shadow: -8px 10px #534887;
-    /*border: white 1px solid;*/
     background-color: #FF3F91;
 }
 
@@ -219,4 +218,3 @@ button:hover {
     box-shadow: -8px 10px #85A82F;
     margin-bottom: 6px;
 }
-
